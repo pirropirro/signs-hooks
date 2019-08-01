@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '6'
+install:
+- npm install
+script:
+- npm run-script build
+deploy:
+  provider: npm
+  email: fra.pirrotta@gmail.com
+  api_key:
+    secure: CwGlExIj5mzSjQhincvvmYebOMsBfFW0m1iwsLwXg6xFNSsTD3EEZh+rsvcinF98P8TsTA+uAF0B6bRq45p9Aqo7yujeG5XkjylsXNBfQi+sFT0fDiTd1kEjx1aMNY4potliIzrducma/acPEnJSrL84BLyzJUcTIS/ZUmJJS5QEcsTcYvl97FYDKF6kVwKSdElSjCbWKWaDvauxNAkuGP2IiPhGEkmnjlAzFxRlnnGbrw7p/rC8HOoZRFJu96Hd+TFIsoleNEyOk2iOQE3xeQX+IC25ob61nIqxGnGa2OKTcK5gCtz484h/W3RmiTJIHTbi3Qc3S9SabBjE7jRAE1sZj5XfVSa1gcdZJDxco0vX/ZGzSJmhl4x9NxtRcQM6BXpkfyYO7IfWuYJhenDqjU+GH7zTj7otwiw3uYE65QL8v/GN0afkc/lIjd/FMQoqVMQ1MXLxhjAvnDtqRTF6QPwtvt+N0LykdhupnB0ugCXBqecPSgWoolFCdNoakSjc61iC1sQhT8KGfOlh0fOSbjkX5Q2jCAPgk2PFrHJjs1aczc8Brcc7O5tPjSZbPcFsnrmCsMSGxagApG5AoQNJelDuroIVG4Zi1iyZPdybM3yc5tW44HPm4uDCJKmeoflKB+uhH9qH62prHk9iYSxBfKOF/duyP7CDIkkuJFSwhbk=
+  on:
+    tags: true
