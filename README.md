@@ -1,1 +1,3 @@
-# signs-hooks
+# signs-rooms
+
+## signs-js + socket.io

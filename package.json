@@ -1,0 +1,37 @@
+{
+  "name": "signs-rooms",
+  "version": "0.1.0",
+  "description": "signs-js + socket.io",
+  "main": "dist",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirropirro/signs-rooms.git"
+  },
+  "author": "pirropirro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pirropirro/signs-rooms/issues"
+  },
+  "homepage": "https://github.com/pirropirro/signs-rooms#readme",
+  "dependencies": {
+    "path-match": "^1.2.4",
+    "path-to-regexp": "^3.0.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "4.0.35",
+    "@types/lodash": "^4.14.120",
+    "@types/node-fetch": "^2.1.5",
+    "@types/path-to-regexp": "^1.7.0",
+    "@types/request": "^2.48.1",
+    "@types/socket.io": "^2.1.2",
+    "signs-js": "^0.3.0",
+    "typescript": "^3.0.3"
+  },
+  "peerDependencies": {
+    "signs-js": "^0.3.0"
+  }
+}
