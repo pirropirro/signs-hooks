@@ -7,6 +7,8 @@ export type RoomResponse = {
 
 export interface IRoom<T = any> {
   on(parameters?: T): Promise<RoomResponse>;
+  join?(clientId: string, parameters?: T): void;
+  leave?(clientId: string, parameters?: T): void;
 }
 
 export function Room(location: string) {

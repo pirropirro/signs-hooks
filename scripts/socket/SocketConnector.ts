@@ -18,21 +18,20 @@ export class SocketConnector implements ISocketConnector {
   connect(socket: Socket): void {
     const clientId = socket.client.id;
     const roomId = this.extractor.extractFrom(socket);
-    const { room, params } = this.rooms.retrieve(`${roomId}`);
+    const { room, params } = this.rooms.retrieve(roomId);
     if (!room) return;
 
-    this.join(socket, clientId, roomId);
-    room.on(params).then(data =>
-      this.emitter.broadcastTo(clientId, roomId, data));
-  }
-
-  private join(socket: Socket, clientId: string, roomId: string): void {
     socket.join(roomId);
+    if (room.join) room.join(clientId, params);
     this.logger.debug(`${clientId} join ${roomId}`);
 
     socket.on("disconnect", () => {
-      this.logger.debug(`${clientId} leave ${roomId}`);
       socket.leave(roomId)
+      if (room.leave) room.leave(clientId, params);
+      this.logger.debug(`${clientId} leave ${roomId}`);
     });
+
+    room.on(params).then(data =>
+      this.emitter.broadcastTo(clientId, roomId, data));
   }
 }
