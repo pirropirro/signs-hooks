@@ -1,6 +1,6 @@
 {
   "name": "signs-rooms",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "signs-js + socket.io",
   "main": "dist",
   "scripts": {
@@ -28,10 +28,10 @@
     "@types/path-to-regexp": "^1.7.0",
     "@types/request": "^2.48.1",
     "@types/socket.io": "^2.1.2",
-    "signs-js": "^0.3.0",
+    "signs-js": "^0.4.5",
     "typescript": "^3.0.3"
   },
   "peerDependencies": {
-    "signs-js": "^0.3.0"
+    "signs-js": "^0.4.5"
   }
 }
