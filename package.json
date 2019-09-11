@@ -1,6 +1,6 @@
 {
   "name": "signs-rooms",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "signs-js + socket.io",
   "main": "dist",
   "scripts": {
